@@ -1,10 +1,15 @@
 import java.util.*;
 
 public class MyArrayListTest {
+    public static void swap(ArrayList<Integer> list, int idx, int idx2) {
+        int temp = list.get(idx);
+        list.set(idx, list.get(idx2));
+        list.set(idx2, temp);
+    }
     public static void main(String[] args) {
         ArrayList<Integer> list = new ArrayList<>();
-        ArrayList<String> list2 = new ArrayList<>();
-        ArrayList<Boolean> list3 = new ArrayList<>();
+        // ArrayList<String> list2 = new ArrayList<>();
+        // ArrayList<Boolean> list3 = new ArrayList<>();
 
         // Add operation
         list.add(1);                                          //O(1)
@@ -14,15 +19,25 @@ public class MyArrayListTest {
         list.add(5);
         // list.add(1,10);                          //O(n)
 
+        //Swap two number
+        int idx=1, idx2=3;
+        System.out.println(list);
+        swap(list,idx,idx2);
+        System.out.println(list);
+
+
         //Find Maximum                                         //O(n)
-        int max = Integer.MIN_VALUE;
-        for(int i=0;i<list.size();i++){
+        // int max = Integer.MIN_VALUE;
+        // for(int i=0;i<list.size();i++){
             // if(max<list.get(i)){
             //     max = list.get(i);
             // }
-            max = Math.max(max, list.get(i));
-        }
-         System.out.println("The maximum number is "+ max);
+            //or
+        //     max = Math.max(max, list.get(i));
+        // }
+        //  System.out.println("The maximum number is "+ max);
+
+
         // System.out.println(list.size());
 
         // for(int i=0; i<list.size();i++){
