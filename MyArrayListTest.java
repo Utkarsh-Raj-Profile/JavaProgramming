@@ -1,0 +1,49 @@
+import java.util.*;
+
+public class MyArrayListTest {
+    public static void main(String[] args) {
+        ArrayList<Integer> list = new ArrayList<>();
+        ArrayList<String> list2 = new ArrayList<>();
+        ArrayList<Boolean> list3 = new ArrayList<>();
+
+        // Add operation
+        list.add(1);                                          //O(1)
+        list.add(2);
+        list.add(3);
+        list.add(4);
+        list.add(5);
+        // list.add(1,10);                          //O(n)
+
+        System.out.println(list.size());
+
+        // for(int i=0; i<list.size();i++){
+        //     System.out.print(list.get(i)+  " ");
+        // }
+        // System.out.println();
+
+        //Reverse of arraylist                             //O(n)
+        // for(int i=list.size()-1;i>=0;i--){
+        //     System.out.print(list.get(i) + " ");
+        // }
+        // System.out.println();
+
+        // Get operation                                     //O(1)
+
+        // int element = list.get(1);
+        // System.out.println(element);
+
+        // Remove operation                                     //O(n)
+
+        // list.remove(2);
+        // System.out.println(list);
+
+        // Set operation                                       //O(n)
+        // list.set(2, 20);
+        // System.out.println(list);
+
+        // Contains operation
+
+        // System.out.println(list.contains(5));
+        // System.out.println(list.contains(11));
+    }
+}
