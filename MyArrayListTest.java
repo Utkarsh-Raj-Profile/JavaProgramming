@@ -1,4 +1,5 @@
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Collections;
 
 public class MyArrayListTest {
     public static void swap(ArrayList<Integer> list, int idx, int idx2) {
@@ -18,6 +19,9 @@ public class MyArrayListTest {
         list.add(4);
         list.add(5);
         // list.add(1,10);                          //O(n)
+
+        //Short array
+        Collections.sort(list);
 
         //Swap two number
         int idx=1, idx2=3;
