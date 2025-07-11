@@ -21,13 +21,17 @@ public class MyArrayListTest {
         // list.add(1,10);                          //O(n)
 
         //Short array
-        Collections.sort(list);
+        Collections.sort(list);                                      //assending order
+        System.out.println(list);
+
+        Collections.sort(list, Collections.reverseOrder());          //decending order       (comparator fnx-logic)
+        System.out.println(list);
 
         //Swap two number
-        int idx=1, idx2=3;
-        System.out.println(list);
-        swap(list,idx,idx2);
-        System.out.println(list);
+        // int idx=1, idx2=3;
+        // System.out.println(list);
+        // swap(list,idx,idx2);
+        // System.out.println(list);
 
 
         //Find Maximum                                         //O(n)
