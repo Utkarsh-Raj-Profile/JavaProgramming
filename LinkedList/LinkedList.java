@@ -1,7 +1,7 @@
 public class LinkedList {
     public static class Node{
         int data;
-        int next;
+        Node next;
 
         public Node(int data){
             this.data = data;
