@@ -1,7 +1,7 @@
 import java.util.*;
 
 public class NextGreaterElement {
-    public static void main(String[] args) {
+    public static void main(String[] args) {                      //O(n)
         int arr[] = {6,8,0,1,3};
         Stack<Integer> s = new Stack<>();
         int nxtGreater[] = new int[arr.length];
@@ -27,5 +27,11 @@ public class NextGreaterElement {
             System.out.print(nxtGreater[i] + " ");
         }
         System.out.println();
+
+
+        //Next Greater Right
+        //Next Greater Left
+        //Next Smaller Right
+        //Next Smaller Left
     }    
 }
