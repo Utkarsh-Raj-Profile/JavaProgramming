@@ -1,7 +1,7 @@
 import java.util.*;
 
 public class MajorityElement {
-    public static void main(String[] args) {
+    public static void main(String[] args) {                     //O(n)
         int arr[] = {1,3,2,5,1,3,1,5,1};
         HashMap<Integer, Integer> map = new HashMap<>();
 
@@ -17,8 +17,13 @@ public class MajorityElement {
             map.put(arr[i], map.getOrDefault(arr[i], 0) + 1);
         }
 
-        Set<Integer> KeySet = map.keySet();
-        for (Integer key : KeySet) {
+        // Set<Integer> KeySet = map.keySet();
+        // for (Integer key : KeySet) {
+
+        //or
+
+
+        for(Integer key : map.keySet()){
             if(map.get(key) >  arr.length/3){
                 System.out.println(key);
             }
