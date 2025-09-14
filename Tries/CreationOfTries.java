@@ -35,6 +35,19 @@ public class CreationOfTries {
         return curr.eow == true;
     }
 
+    public static boolean startsWith(String prefix){ 
+        Node curr = root;
+
+        for(int i = 0; i < prefix.length(); i++){
+            int idx = prefix.charAt(i) - 'a';
+            if(curr.children[idx] == null){
+                return false;
+            }
+            curr = curr.children[idx];
+        }
+        return true;
+    }
+
     public static boolean wordBreak(String key){                                               //O(L) linear time
         if(key.length() == 0){
             return true;
@@ -58,12 +71,25 @@ public class CreationOfTries {
 
         //Word Break Problem
 
-        String arr[] = {"i", "like", "sam", "samsung", "mobile", "ice"};
-        for(int i = 0; i < arr.length; i++){
-            insert(arr[i]);
+        // String arr[] = {"i", "like", "sam", "samsung", "mobile", "ice"};
+        // for(int i = 0; i < arr.length; i++){
+        //     insert(arr[i]);
+        // }
+
+        // String key = "ilikesamsung";
+        // System.out.println(wordBreak(key));
+
+        //startsWith
+
+        String words[] = {"apple", "app", "mango", "man", "woman"};
+        String prefix1 = "app"; //true
+        String prefix2 = "moon"; //false
+
+        for(int i = 0; i < words.length; i++){
+            insert(words[i]);
         }
 
-        String key = "ilikesamsung";
-        System.out.println(wordBreak(key));
+        System.out.println(startsWith(prefix1));
+        System.out.println(startsWith(prefix2));
     }
 }
