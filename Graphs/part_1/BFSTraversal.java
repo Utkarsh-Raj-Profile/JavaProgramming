@@ -74,6 +74,21 @@ public class BFSTraversal {
         }
     }
 
+    public static boolean hasPath(ArrayList<Edge>[] graph,int src, int dest, boolean vis[]){
+        if(src == dest){
+            return true;
+        }
+        vis[src] = true;
+        for(int i = 0; i < graph[src].size(); i++){
+            Edge e = graph[src].get(i);
+            //e.dist = neighbour
+            if(!vis[e.dest] && hasPath(graph, e.dest, dest, vis)){
+                return true;
+            }
+        }
+        return false;
+    }
+
     public static void main(String[] args) {
         /*
          *                  1--------3
@@ -88,6 +103,9 @@ public class BFSTraversal {
          createGraph(graph);
 
          //bfs(graph);
-         dfs(graph, 0, new boolean[v]);
+         //dfs(graph, 0, new boolean[v]);
+
+         //hasPath
+         System.out.println(hasPath(graph, 0, 5, new boolean[v]));
     }
 }
