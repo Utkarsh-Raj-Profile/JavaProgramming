@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class BFSTraversal {
+public class GraphTraversal {
     static class Edge{
         int src;
         int dest;
