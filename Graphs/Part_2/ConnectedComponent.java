@@ -118,6 +118,7 @@ public class ConnectedComponent {
          createGraph(graph);
 
          //bfs(graph);
+         
          //dfs(graph, 0, new boolean[v]);
 
          //hasPath
