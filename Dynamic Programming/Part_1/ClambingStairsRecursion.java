@@ -1,5 +1,5 @@
 public class ClambingStairsRecursion {
-    public static int countWays(int n){
+    public static int countWays(int n){          //O(2^n)
         if(n == 0){
             return 1;
         }
